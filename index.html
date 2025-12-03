@@ -4,196 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ansu Basnet | Portfolio</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: "Nunito", sans-serif;
-            background: #ffe5f1;
-            color: #4a0033;
-        }
-
-        header {
-            background: linear-gradient(135deg, #ffb6d9, #ff8ac2);
-            padding: 60px 20px;
-            text-align: center;
-            color: #4a0033;
-            border-bottom: 4px solid #ff66b3;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
-            font-weight: 800;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 5px;
-            opacity: 0.9;
-        }
-
-        section {
-            max-width: 1100px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: #cc0066;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        /* CENTERED LAYOUT */
-        #about-box {
-            background: #ffd6e8;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #about-text {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            max-width: 750px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .about-photos {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .about-photos img {
-            width: 260px;
-            height: auto;
-            border-radius: 18px;
-            border: 3px solid #ff99cc;
-            box-shadow: 0 4px 10px rgba(255, 128, 171, 0.4);
-            transition: 0.3s;
-        }
-
-        .about-photos img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 18px #ff66b3;
-        }
-
-        .project {
-            background: white;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 20px;
-            border-left: 8px solid #ff66b3;
-            box-shadow: 0 4px 15px rgba(255, 100, 160, 0.25);
-            transition: 0.3s;
-        }
-
-        .project:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 8px 20px rgba(255, 100, 160, 0.4);
-        }
-
-        .project h3 {
-            margin-top: 0;
-            color: #cc0066;
-        }
-
-        #contact {
-            text-align: center;
-        }
-
-        #contact p {
-            font-size: 1.2rem;
-            margin: 8px 0;
-        }
-
-        a {
-            color: #ff3399;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            background: #ffb6d9;
-            padding: 20px;
-            color: #4a0033;
-            border-top: 4px solid #ff66b3;
-            margin-top: 70px;
-            font-size: 1.1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+    <!-- NAVIGATION -->
     <header>
-        <h1>Ansu Basnet</h1>
-        <p>Web Developer • Designer • Creative Learner</p>
+        <nav class="navbar">
+            <span class="logo">Ansu Basnet</span>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menu-button" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        </nav>
     </header>
 
-    <!-- ABOUT ME -->
+    <!-- HERO SECTION -->
+    <section id="hero">
+        <video autoplay loop muted id="video-background">
+            <source src="Ansu vedioooo.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1>Ansu Basnet</h1>
+            <p>Web Developer • Designer • Creative Learner</p>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
     <section id="about">
         <h2>About Me</h2>
-
         <div id="about-box">
-
-            <!-- TEXT CENTERED -->
             <div id="about-text">
                 <p>
-                    Hi! I'm <strong>Ansu Basnet</strong>, a creative and passionate beginner web developer. 
-                    I love soft aesthetics, baby pink themes, and designing adorable, modern websites.
-                    This portfolio is a space for my progress, ideas, and future dreams.
+                    Hi! I'm <strong>Ansu Basnet</strong>, a creative and passionate beginner web developer.
+                    I love modern, clean designs and a dark blue aesthetic.
                 </p>
             </div>
-
-            <!-- PHOTOS CENTERED -->
             <div class="about-photos">
-                <img src="Ansu1.jpg" alt="Ansu Photo 1">
+                <img src="Ansu1.jpg" alt="Ansu Photo">
                 <img src="Ansu2.jpg" alt="Ansu Photo 2">
             </div>
-
         </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS SECTION -->
     <section id="projects">
         <h2>My Projects</h2>
-
-        <div class="project">
-            <h3>🌸 Personal Blog</h3>
-            <p>A soft pastel themed blog built using only HTML and CSS. Updates coming soon!</p>
-        </div>
-
-        <div class="project">
-            <h3>🌸 Mini Portfolio</h3>
-            <p>A practice portfolio focused on layout, fonts, and pink tones.</p>
+        <div id="projects-grid">
+            <div class="project-card">Project 1</div>
+            <div class="project-card">Project 2</div>
+            <div class="project-card">Project 3</div>
         </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT FORM SECTION -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: <strong>ansu610@gmail.com</strong></p>
-        <p>GitHub: <a href="https://github.com/Ansubasnet-creator" target="_blank">Ansubasnet-creator</a></p>
+
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+            <p id="form-message"></p>
+        </form>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        © 2025 Ansu Basnet – All Rights Reserved
+        © 2025 Ansu Basnet – All Rights Reserved <br>
+        Email: <strong>ansubasnet610@gmail.com</strong> <br>
+        GitHub: <a href="https://github.com/Ansubasnet-creator" target="_blank">Ansubasnet-creator</a>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
